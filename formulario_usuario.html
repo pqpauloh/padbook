@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>Cadastro</title>
+        <meta charset="UTF-8">
+        <link href="css/estiloUsuario.css" type="text/css" rel="stylesheet">
+		<script language="JavaScript" src="js/validacao.js"></script>
+		<script type="text/javascript" src="http://cidades-estados-js.googlecode.com/files/cidades-estados-1.2-utf8.js"></script> 
+<script type="text/javascript">
+
+
+
+window.onload = function() {
+  new dgCidadesEstados({
+    estado: document.getElementById('estado'),
+    cidade: document.getElementById('cidade'),
+     estadoVal: '<%=Request("estado") %>',
+  cidadeVal: '<%=Request("cidade") %>'
+  });
+}
+
+
+
+
+
+
+</script>
+
+    </head>
+    <body>
+        
+         
+         <div>
+            <nav>
+                <ul class="slideuptabs red">
+                    <li id="home"><a href="index.php">Home</a></li>
+                    <div id="cssmenu">
+                    
+       
+                 
+                </ul>
+            </nav>
+           
+            </div>
+       
+        
+        
+    <center>
+       
+        <form action="gravar_usuario.php" method="POST" id="forms">
+             <h1>Cadastro de Usuário</h1>
+            <label id="1">Nome</label>
+            <input type="text" name="nome" size="30" maxlength="15" placeholder="Digite aqui seu Nome..." />
+            <br /><br/>
+            <label id="1">Login</label>
+            <input type="text" name="login" size="30" maxlength="15" placeholder="Digite aqui seu Login..." />
+            <br /><br/>
+            <label id="1">Senha</label>
+            <input type="password" name="senha" size="30" maxlength="15" placeholder="Digite aqui sua Senha..." />
+            <br /><br/>
+            <label id="1">C.Senha</label>
+            <input type="password" name="cSenha" size="30" maxlength="15" placeholder="Digite aqui sua C.Senha..." />
+            <br/><br/><br/>
+		    <p style="color:black;">------------------------------------------------------------------</p>
+			<p style="color:black;">------------------------------------------------------------------</p>
+            <label>Email </label><input type="text" name="email"  required id="email" size="30" maxlength="80" placeholder="Digite aqui sue Email..."><br/><br/>
+            <label id="1">Fone</label><input type="text" name="telefone" id="telefone" maxlength="15" /><br/><br/>
+            <form id="sistema" name="sistema" method="post" action="gravar_usuario.php">
+				<label id="subir">Estado</label><br/><br/><br/><br/><select id="estado" name="estado" ></select><br/><br/>
+				<label id="subir">Cidade</label><br/><br/><br/><br/><select id="cidade" name="cidade"></select><br/><br/>
+				<div style="color:black">
+				<p style="color:black">Sexo:</p>
+		            <input id="sexo" type="radio" name="sexomasculino" value="M">Masculino 
+		            <input  id="sexo" type="radio" name="sexofeminino" value="F">Feminino
+				</div>
+				<label>Data de Aniversário</label><input id="txtDt" name="txtDt" onblur="fctValidaData(this);" type="text">
+		            <br>
+           <br/><br/><br/>
+
+			<input id="enviar" type="submit" value="Gravar">
+        </form>
+    </center>
+    </body>
+</html>
