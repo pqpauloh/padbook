@@ -10,6 +10,6 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <h3>Obrigado por se cadastrar em nosso site, no momento ainda nã estamos totalmente no ar, por favor agurade um pouco.</h3>
+        <h3>Obrigado por se cadastrar em nosso site, no momento ainda nã estamos totalmente no ar, por favor agurade um pouco e fique tranquilo, voce ja esta cadastrado em nosso site, assim nao precisa fazer o cadastro novamente apenas fazer op login quando estivermospronto para ir ao ar.</h3>
     </body>
 </html>
